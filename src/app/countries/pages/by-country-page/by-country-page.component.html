@@ -1,0 +1,21 @@
+
+<h2>Por Pais</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- SearchBox -->
+        <shared-search-box [initialValue]="initialValue" (onDebaunce)="searchByCountry($event)" placeHolder="Ingrese el pais"></shared-search-box>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <!-- Tabla de resultados -->
+        <hr>
+        <shared-loading-spiner *ngIf="isLoading"></shared-loading-spiner>
+        <countries-table [countries]="countries"></countries-table>
+    </div>
+</div>
+
